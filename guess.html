@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="guess.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+        <script src="guess.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="title">
+                숫자 맞히기 게임
+            </div>     
+        </header>
+        <div id="content">            
+            <div class="lab">
+                <h3>숫자 맞히기 게임</h3>
+                <p>컴퓨터가 생성한 숫자를 맞히는 게임<br></p>
+                <form>
+                    숫자:
+                    <input type="text" id="user" size="5">
+                    <input type="button" value="확인" onclick="guess();">
+                    <input type="button" value="다시시작" onclick="replay();">
+                    <br><br>
+                    추측횟수:
+                    <input type="text" id="guesses" size="5">
+                    결과:
+                    <input type="text" id="result" size="16">
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <p>숫자맞히기</p>
+        </footer>
+    </body>
+</html>
