@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- node 추가 삭제 -->
+    <h1>javascript node</h1>
+
+    <p>springframework</p>
+    <p>springframework</p>
+    <p>springframework</p>
+    <p>springframework</p>
+    <p>springframework</p>
+
+    <script>
+        /*
+        const ps = document.querySelectorAll("p");
+        ps.forEach((pTage) => {
+            pTage.parentNode.removeChild(pTage);
+        });
+        */
+        const bodyChildren = document.body.childNodes;
+        
+        /*
+        bodyChildren.forEach((node)=>{
+            console.log(node.nodeName);
+        }); 
+        */
+        //console.log(bodyChildren);
+
+        bodyChildren.forEach((node)=>{        
+        console.log(node.nodeName);
+        // nodeName 이 P 인 node 들을 삭제함
+            if(node.nodeName === 'P'){
+            node.parentNode.removeChild(node);
+            }
+        }); 
+
+        // a tag 생성하기
+        const element1 = document.createElement("a");
+        // text node 생성하기
+        const textNode1 = document.createTextNode("네이버");
+        // 속성(attribute) node 추가하기
+        const hrefAttr1 = document.createAttribute("href");
+        // href 속성에 url 설정하기 
+        hrefAttr1.value = "http://www.naver.com";
+
+        // a tag에 text 추가하기
+        element1.appendChild(textNode1);
+        // a tag에 href 속성 추가하기
+        element1.setAttributeNode(hrefAttr1);
+
+        // body 에 자식 node 로 a tag 추가하기
+        document.body.appendChild(element1);
+
+        //h1 태그 삭제하기
+        const elementH1 = document.querySelector("h1");
+        elementH1.parentNode.removeChild(elementH1);
+
+
+    </script>
+</body>
+</html>

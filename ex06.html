@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .font2em{
+            font-size: 32px;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.naver.com">네이버</a><br>
+    <a id="font2em" class="font2em" href="http://www.naver.com">네이버</a>
+    <script>
+        const element1 = document.querySelector("a");
+        console.log(element1.getAttribute("href"))
+        element1.setAttribute("href", "http://www.google.com");
+        console.log(element1.getAttribute("href"))
+        // 링크 페이지를 새창(새탭)에서 띄우기
+        element1.setAttribute("target", "_blank");
+        // 링크 없애기
+        //element1.removeAttribute("href");
+
+        const element2 = document.getElementById("font2em");
+        element2.setAttribute("class", "red");
+        
+    </script>
+</body>
+</html>

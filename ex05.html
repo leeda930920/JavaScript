@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- 
+    dataset 속성 : html 에서 사용하는 사용자 정의 속성
+    data-사용자속성명 형식으로 지정해서 사용함
+      ㄴ 이를 javascript 에서 사용할 수 있음
+  -->
+    <button data-cnt="10">notebook 구매</button><br><br>
+    <button data-snt="0">keyboard 구매</button>
+
+    <script>
+        const buttons = document.querySelectorAll("button");
+        console.log(buttons);
+        buttons.forEach((element) => {
+        console.log(element,"-",element.dataset,"-",element.dataset.cnt,
+                    "-",element.dataset.snt,"-",element.dataset.product);
+        });
+    </script>
+
+</body>
+</html>

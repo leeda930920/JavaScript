@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .style1{
+            color: red;
+            font-size: 24px;
+        }
+        .style2{
+            color: blue;
+            font-size: 24px;    
+        }
+    </style>
+</head>
+<body>
+    <p id="text1">javascript !!!</p>
+    <p id="text2" class="style2">springframework !!!</p>
+
+    <script>
+        const element1 = document.querySelector("#text1");
+
+        // 엘리먼트에 클래스 추가하기
+        element1.classList.add("style1");
+
+        // 엘리먼트에 클래스 삭제하기
+        element1.classList.remove("style1");
+
+        const element2 = document.querySelector("#text2");
+        element2.classList.toggle("style2");
+        setInterval(()=>{
+        element2.classList.toggle("style2");
+        }, 600);
+
+
+
+    </script>
+</body>
+</html>

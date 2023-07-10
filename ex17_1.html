@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>javascript study - 1</p>
+    <p>javascript study - 2</p>
+    <p>javascript study - 3</p>
+    <script>
+        const ps = document.querySelectorAll("p");
+        ps.forEach((element) => {
+            element.addEventListener("click", function(){
+                //[object HTMLParagraphElement]
+                //alert(this);
+                //화살표 함수에서는 this 가 이벤트가 적용되는 객체가 아님
+                //this 를 사용하지 못하고, event 객체를 parameter로 받아서
+                //event.target 속성을 사용해서 이벤트가 적용되는 객체를 찾음
+                //(현재 this 는 이벤트가 적용되는 객체 : p tage element)
+                //toggle key 로 동작하려면
+                //if 조건절 값과 else 문의 값이 같아야 됨
+                if(event.target.style.color === 'blue'){
+                    event.target.style.color = 'green'
+                } else {
+                    event.target.style.color = 'blue';
+                }
+            })
+
+        });
+    </script>
+</body>
+</html>

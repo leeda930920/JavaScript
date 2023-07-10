@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title{
+            color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <p id="title">"더 조은"
+        <span style="display: none;">Javascript Class
+        </span>
+    </p>
+
+    <p id="textContent"></p>
+    <p id="innerText"></p>
+    <p id="innerHTML"></p>
+
+    <div id="text">div tag</div>
+
+    <script>
+
+        const element1 = document.getElementById("text");
+
+        element1.style.color = 'red';
+        element1.style.color = 'rgb(255, 0, 0)';
+        element1.style.color = 'rgb(0, 255, 0)';
+        element1.style.color = 'rgb(0, 0, 255)';
+
+        element1.style.background = 'yellow';
+
+        element1.style.fontSize = "30px";
+
+        const textC = document.querySelector("#textContent");
+        textC.textContent = "  안녕하세요. javascript !!";
+        document.querySelector("#textContent").textContent = "  안녕하세요. textContent !!";
+        document.querySelector("#innerText").innerText = "  안녕하세요. innerText !!";
+        document.querySelector("#innerHTML").innerHTML = `<strong>innerHTML !!</strong>`;
+        
+        /*
+        const titleElement1 = document.getElementsByTagName("p")[0];
+        console.log(titleElement1.textContent);
+        console.log(titleElement1.innerText);
+        console.log(titleElement1.innerHTML);
+
+        //titleElement1.innerText = "titleElement1.innerText";
+        titleElement1.innerHTML = "titleElement1.innerHTML";
+        */
+
+    </script>    
+</body>
+</html>

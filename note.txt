@@ -1,0 +1,76 @@
+chrome console 에서 실행하기
+
+
+document.firstChild
+
+document.childNodes[0]
+document.childNodes[1]
+
+document.lastChild.childElementCount
+
+document.lastChild.childNodes[0]
+
+document.lastChild.childNodes[0].firstChild
+
+document.lastChild.childNodes[0].nextElementSibling
+
+document.children[0].children[0].children
+
+document.children[0].children[0].children[0]
+
+document.children[0].children[0].children[0].nextElementSibling
+
+
+ex02.html
+
+개발자 도구에서
+chrome console 에서 실행함
+
+document.getElementById("h1");
+document.getElementById("a");
+
+document.getElementsByClassName("test");
+
+document.getElementsByClassName("test")[0];
+document.getElementsByClassName("test")[1];
+
+document.querySelector("h1");
+<h1 id=​"h1" class=​"test">​H1​</h1>​
+document.querySelector("head");
+<head>​…​</head>​
+document.querySelector("html");
+<html lang=​"en">​<head>​…​</head>​<body>​…​</body>​</html>​
+document.querySelector("a.test");
+document.querySelectorAll(".test");
+NodeList(2) [h1#h1.test, a#a.test]
+document.querySelectorAll(".t");
+NodeList(4) [p.t, p.t, p.t, p.t]
+
+
+document.getElementById("title").textContent;
+'"더조은" Javascript Class'
+document.getElementById("title").innerText;
+'"더조은" Javascript Class'
+document.getElementById("title").innerHTML;
+'"더조은" <span style="color:red;">Javascritp Class</span>'
+
+<span style="display: none;">Javascript Class</span>
+의 경우 innerText
+document.getElementById("title").innerText;
+'"더조은"'
+
+document.querySelector("#textContent").textContent = `<p>textContent</p> 속성`;
+'<p>textContent</p> 속성'
+document.querySelector("#innerText").innerText = `<p>innerText</p> 속성`;
+'<p>innerText</p> 속성'
+
+textContent 속성과 innerText 속성에
+ `<p>innerHTML</p> 속성` 를 할당하면
+단순한 문자열로로 인식해서 node 의 content 에 적용함
+ ㄴ 
+
+innerHTML 속성에 `<p>innerHTML</p> 속성` 를 할당하면
+태그로 인식해서 node 의 content 에 적용함
+ ㄴ javascript 으로 동적으로 code(tag) 를 삽입할 수 있음
+document.querySelector("#innerHTML").innerHTML = `<p>innerHTML</p> 속성`;
+'<p>innerHTML</p> 속성'

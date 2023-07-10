@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="clicked()">여기를 클릭 !!!</button><br>
+    <button ondblclick="dblclicked()">여기를 더블 클릭 !!!</button><br>
+    <button onmouseover="mouseOver()">여기에 마우스 오버 !!!</button><br>
+
+    <input type="text" onkeydown="keyDown();" /><br>
+    <input type="text" onfocus="onFocus();" /><br>
+
+    <button id="btn1">btn1 버튼 클릭</button><br>
+    <input type="text" onfocus="focus1"/><br>
+
+    <script>
+        function clicked(){
+            alert('클릭 되었음 !!!');
+        }
+        function dblclicked(){
+            alert('더블 클릭 되었음 !!!');
+        }
+        function mouseOver(){
+            alert('마우스 오버 되었음 !!!');
+        }
+        function keyDown(){
+            alert('키보드를 누름 !!!');
+        }
+        /*
+        function onFocus(){
+            alert('마우스 포커싱 !!!');
+        }
+        */
+
+        const btn1 = document.querySelector("#btn1")
+        btn1.onclick = function mouseOverBtn1(){
+            alert('btn1 버튼 클릭 !!!');
+        }
+
+        /*
+        const focus1 = document.querySelector("#focus1");
+        focus1.onfocus = onFocusEvent;
+        function onFocusEvent(){
+            alert('포커스 이벤트 발생 !!!');
+        }
+        */
+       
+        /*
+        focus1.onfocus = function(){
+            alert('포커스 이벤트 발생 !!!');
+        }
+        */
+
+    </script>
+
+</body>
+</html>

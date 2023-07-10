@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1">
+        <label for="username">이름</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="age">나이</label>
+        <input type="text" id="age" name="age"><br>
+        <label for="pw">비밀번호</label>
+        <input type="password" id="pw" name="pw"><br>
+        <label for="gender">성별</label>
+        <select id="gender" name="gender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select><br><br>
+        <textarea name="text1" id="text1" cols="30" rows="10"></textarea><br><br>
+        <button type="submit" name="btn1">보내기</button>
+        <!--<input type="submit" name="btn1" value="전 송"/>-->
+    </form>
+
+    <script>
+        const f1 = document.f1;
+        console.log(f1.elements);
+        console.log(f1.elements.username);
+        console.log(f1.elements.btn1);
+        console.log(f1.elements.btn1.innerText);
+        console.log(f1.elements.btn1.textContent);
+        //console.log(f1.elements.btn1.value);
+        f1.elements.username.value = "더조은"
+
+    </script>
+</body>
+</html>
